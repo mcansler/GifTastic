@@ -1,0 +1,79 @@
+body {
+
+    background: lightgray;
+}
+
+
+buttons {
+
+    margin: 0 5px;
+}
+
+.searchButton, .submitButton {
+
+    background-color: #008CBA;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#buttonsArea {
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+form {
+
+    float: right;
+    margin-right: 50px;
+}
+
+label {
+
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    
+    margin: 10px auto;
+}
+
+#search-input {
+
+    position: relative;
+    clear: both;
+    
+    height: 30px;
+    width: 290px;
+    margin: 10px auto;
+    font-size: 20px;
+    padding: 1%;
+}
+
+.submitButton {
+
+    position: relative;
+    clear: both;
+    
+    margin: 10px auto;
+}
+
+.capitalize
+{
+    text-transform: capitalize;
+}
+
+.search-item {
+
+    float: left;
+    margin: 10px;
+}
+
+#searches {
+
+    float: left;
+}
+
