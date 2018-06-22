@@ -1,6 +1,7 @@
 body {
 
     background: lightgray;
+    text-transform: capitalize;
 }
 
 h1 {
@@ -21,7 +22,7 @@ buttons {
     color: white;
     font-size: 20px;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 10px 32px;
     text-align: center;
     cursor: pointer;

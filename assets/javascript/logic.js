@@ -13,6 +13,7 @@ function populateButtons(searchArray,classToAdd,areaToAddTo){
         a.attr("data-type",searchArray[i]);
         a.text(searchArray[i]);
         $(areaToAddTo).append(a);
+        
     }
 }
 
@@ -61,16 +62,34 @@ $(document).on("click",".searchImage",function(){
 //var newSearch = search.eq(0).val();
 
 $(document).on("click",".submitButton",function(){
-    var search = $("#search-input").val().trim();
-    var newSearch = String(search);
+    var newSearch = $("#search-input").val().trim();
+    //var newSearch = String(search);
     //console.log(search);
 
     // for(var i = 0; i < searchArray.length; i++){
 
-    //     if(searchArray.indexOf(i) === -1) {
-    //         this.items.push(item);
-    //         console.log(this.items);
-    //       }
+    if(newSearch === ""){
+        populateButtons(searchArray,"searchButton","#buttonsArea");
+        $("#search-input").val("");
+        return false;
+
+    }
+    
+    
+    else if(searchArray.indexOf(newSearch) === -1) {
+            searchArray.push(newSearch);
+            populateButtons(searchArray,"searchButton","#buttonsArea");
+            $("#search-input").val("");
+            return false;
+        
+    }
+    
+    else {
+            populateButtons(searchArray,"searchButton","#buttonsArea");
+            $("#search-input").val("");
+            return false;
+            
+        }
     //     var input = searchArray[i];
     //     var checkInput = String(input);
     //     if(newSearch === checkInput){
@@ -81,9 +100,7 @@ $(document).on("click",".submitButton",function(){
     //      else {
 
             //newSearch.addClass('capitalize');
-            searchArray.push(newSearch);
-            populateButtons(searchArray,"searchButton","#buttonsArea");
-            return false;
+            
          //}
     //}
     
