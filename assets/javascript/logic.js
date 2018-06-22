@@ -57,10 +57,34 @@ $(document).on("click",".searchImage",function(){
     }
 })
 
+//var search = $("input").addClass('capitalize');
+//var newSearch = search.eq(0).val();
+
 $(document).on("click",".submitButton",function(){
-    var newSearch = $("input").eq(0).val();
-    //newSearch.addClass('capitalize');
-    searchArray.push(newSearch);
-    populateButtons(searchArray,"searchButton","#buttonsArea");
-    return false;
+    var search = $("#search-input").val().trim();
+    var newSearch = String(search);
+    //console.log(search);
+
+    // for(var i = 0; i < searchArray.length; i++){
+
+    //     if(searchArray.indexOf(i) === -1) {
+    //         this.items.push(item);
+    //         console.log(this.items);
+    //       }
+    //     var input = searchArray[i];
+    //     var checkInput = String(input);
+    //     if(newSearch === checkInput){
+
+    //         console.log(searchArray[i]);
+    //         return true;
+    //     }
+    //      else {
+
+            //newSearch.addClass('capitalize');
+            searchArray.push(newSearch);
+            populateButtons(searchArray,"searchButton","#buttonsArea");
+            return false;
+         //}
+    //}
+    
 })
